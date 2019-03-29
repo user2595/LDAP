@@ -1,0 +1,74 @@
+dn: ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: Bindaccounts
+
+dn: uid=webseite,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Webseite
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=dashboard,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Dashboard
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=pv-tool,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: PV-Tool
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=wms,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: WMS
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=nextcloud,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Nextcloud
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=limesurvey,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Limesurvey
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=camunda,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Camunda
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=wiki,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Wiki
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=slack,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: Slack
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp

@@ -1,0 +1,17 @@
+dn: uid=user,ou=people,dc=mpldap,dc=local
+cn: first user
+givenName: first
+sn: user
+uid: user
+uidNumber: 5001
+gidNumber: 10001
+homeDirectory: /home/user
+mail: first.user@example.com
+objectClass: top
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp

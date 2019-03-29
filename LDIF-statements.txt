@@ -1,0 +1,68 @@
+*********LDIF statements to create a country object class***********
+
+dn: c=uk,dc=yourhostname,dc=com
+c: uk
+objectclass: country
+
+*********LDIF statements to add a child entry***********
+
+dn: o=xxx,c=uk,dc=yourhostname,dc=com
+o: xxx
+objectclass: organization
+
+*********LDIF statements to add users entry***********
+
+dn: uid=jhon,o=xxx,c=uk,dc=yourhostname,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount	
+uid: john
+sn: Doe
+givenName: John
+cn: John Doe
+displayName: John Doe
+uidNumber: 10000
+gidNumber: 5000
+userPassword: johnldap
+gecos: John Doe
+loginShell: /bin/bash
+homeDirectory: /home/john
+
+dn: uid=davis,o=xxx,c=uk,dc=yourhostname,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount	
+uid: davis
+sn: Doe
+givenName: Davis
+cn: Davis Doe
+displayName: Davis Doe
+uidNumber: 10001
+gidNumber: 5001
+userPassword: Davisldap
+gecos: DavisDoe
+loginShell: /bin/bash
+homeDirectory: /home/davis
+
+*********LDIF statements to modify an attribute***********
+
+dn: uid=davis,o=xxx,c=uk,dc=yourhostname,dc=com
+changetype: modify
+replace: displayName
+displayName: Davis modified
+
+*********LDIF statements to delete an attribute***********
+dn: uid=davis,o=xxx,c=uk,dc=yourhostname,dc=com
+changetype: modify
+delete: gecos
+
+*********LDIF statements to add an attribute***********
+dn: uid=davis,o=xxx,c=uk,dc=yourhostname,dc=com
+changetype: modify
+add: gecos
+gecos: John Doe
+
+
+*********LDIF statements to change the RDN***********
+dn: uid=davis,o=xxx,c=uk,dc=yourhostname,dc=com
+changetype: modrdn
+newrdn: uid=johnRDNmod	
+deleteoldrdn: 0

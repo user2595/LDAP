@@ -1,0 +1,51 @@
+dn: ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: Ressorts
+
+dn: cn=pr,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: PR
+description: All users of Marketing Ressort
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=rm,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: RM
+description: All  users of Realationships Management Ressort
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=qm,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: QM
+description: All users
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=hr,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: HR
+description: All users of Human Resources Ressort
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=it,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: IT
+description: All users of IT Ressort
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=in,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: IN
+description: All users of International Networks Ressort
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=vorstand,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: Vorstand
+description: All users of Vorstand
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=board,ou=ressorts,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: Board
+description: All users of Board and Projektmanager
+member: cn=base_user,ou=people,dc=cct-ev,dc=de

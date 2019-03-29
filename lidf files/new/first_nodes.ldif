@@ -1,0 +1,7 @@
+dn: ou=people,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=groups,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: Groups

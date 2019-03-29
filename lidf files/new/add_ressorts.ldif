@@ -1,0 +1,51 @@
+dn: ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: organizationalUnit
+ou: Ressorts
+
+dn: cn=pr,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: pr
+description: All users of Marketing Resor
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=rm,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: rm
+description: All  users of Realationships Management Resor
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=qm,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: qm
+description: All users
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=hr,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: hr
+description: All users of Human Resources Resor
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=it,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: it
+description: All users of IT Resor
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=in,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: in
+description: All users of International Networks Resor
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=vorstand,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: Vorstand
+description: All users of Vorstand
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=board,ou=ressorts,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: board
+description: All users of Bord and Projektmanager
+member: uid=user,ou=people,dc=mpldap,dc=local

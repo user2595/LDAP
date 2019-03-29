@@ -1,0 +1,75 @@
+dn: ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: Bindaccounts
+
+dn: uid=bindwebseite,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindwebseite
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=binddashboard,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: binddasboard
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindpv-tool,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindpv-tool
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindwms,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindwms
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindnextcloud,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindnextcloud
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindlimeservey,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindlimeservey
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindcamunda,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindcamunda
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindwiki,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindwiki
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+
+
+dn: uid=bindslack,ou=bindaccounts,ou=groups,dc=cct-ev,dc=de
+objectclass: account
+objectclass: simpleSecurityObject
+objectclass: top
+uid: bindslack
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+

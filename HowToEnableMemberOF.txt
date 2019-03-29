@@ -1,0 +1,120 @@
+
+First tip: LDAP is not case sensitive.
+
+Every group created before this module is enabled has to be deleted and remade in order for these changes to take effect. LDAP assigns a "member" attribute behind the scenes to existing users when creating a group.
+
+
+Adding nodes:
+	We want two nodes:
+		Groups node
+    		People node
+	
+	We Make a file named add_nodes.idif:
+	       _______________________________________
+		dn: ou=people,dc=example,dc=com
+		objectClass: organizationalUnit
+		ou: People
+
+		dn: ou=groups,dc=example,dc=com
+		objectClass: organizationalUnit
+		ou: Groups
+	       _______________________________________
+	to add These node file:
+		#ldapadd -x -D cn=admin,dc=example,dc=com -W -f add_nodes.ldif
+
+Enabling MemberOf:
+	To Do so, make the following 3 files:
+		
+		memberof_config.ldif:
+	       _______________________________________
+		dn: cn=module,cn=config
+		cn: module
+		objectClass: olcModuleList
+		olcModuleLoad: memberof
+		olcModulePath: /usr/lib/ldap
+
+		dn: olcOverlay={0}memberof,olcDatabase={1}hdb,cn=config
+		objectClass: olcConfig
+		objectClass: olcMemberOf
+		objectClass: olcOverlayConfig
+		objectClass: top
+		olcOverlay: memberof
+		olcMemberOfDangling: ignore
+		olcMemberOfRefInt: TRUE
+		olcMemberOfGroupOC: groupOfNames
+		olcMemberOfMemberAD: member
+		olcMemberOfMemberOfAD: memberOf
+	       _______________________________________
+
+	       	refint1.ldif: 
+	       _______________________________________	      
+	       	dn: cn=module{1},cn=config
+		add: olcmoduleload
+		olcmoduleload: refint
+	       _______________________________________
+
+		refint2.ldif:
+	       _______________________________________
+
+		dn: olcOverlay={1}refint,olcDatabase={1}hdb,cn=config
+		objectClass: olcConfig
+		objectClass: olcOverlayConfig
+		objectClass: olcRefintConfig
+		objectClass: top
+		olcOverlay: {1}refint
+		olcRefintAttribute: memberof member manager owner
+	       _______________________________________
+
+	And add it by running:
+		#sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f memberof_config.ldif
+		#sudo ldapmodify -Q -Y EXTERNAL -H ldapi:/// -f refint1.ldif
+		#sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f refint2.ldif	
+
+Adding a user:
+	before we add user, we first generated his password hash:
+		#slappasswd -h {SHA} -s my_secret_password
+	yielding this result:
+		#{SHA}M6XDJwA47cNw9gm5kXV1uTQuMoY=
+	add_user.idif
+               _______________________________________
+		dn: uid=john,ou=people,dc=example,dc=com
+		cn: John Doe
+		givenName: John
+		sn: Doe
+		uid: john
+		uidNumber: 5000
+		gidNumber: 10000
+		homeDirectory: /home/john
+		mail: john.doe@example.com
+		objectClass: top
+		objectClass: posixAccount
+		objectClass: shadowAccount
+		objectClass: inetOrgPerson
+		objectClass: organizationalPerson
+		objectClass: person
+		loginShell: /bin/bash
+		userPassword: {SHA}M6XDJwA47cNw9gm5kXV1uTQuMoY=
+	       _______________________________________
+
+	And add it by running:
+	#ldapadd -x -D cn=admin,dc=example,dc=com -W -f add_user.ldif
+
+Adding a group:
+	add_group.ldif:
+	       _______________________________________	
+		dn: cn=mygroup,ou=groups,dc=example,dc=com
+		objectClass: groupofnames
+		cn: mygroup
+		description: All users
+		member: uid=john,ou=people,dc=example,dc=com
+	       _______________________________________
+	test-run:
+		#ldapsearch -x -LLL -H ldap:/// -b uid=john,ou=people,dc=example,dc=com dn memberof
+	Result:
+	#dn: uid=john,ou=People,dc=example,dc=com
+	#memberOf: cn=mygroup,ou=groups,dc=example,dc=com
+
+
+
+
+	

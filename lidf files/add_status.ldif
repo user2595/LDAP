@@ -1,0 +1,21 @@
+dn: ou=status,ou=groups,dc=mpldap,dc=local
+objectClass: organizationalUnit
+ou:status
+
+dn: cn=mitglied,ou=status,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: mitglied
+description: all users who have the status member 
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=alumi,ou=status,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: alumi
+description: all users who have the status alumi 
+member: uid=user,ou=people,dc=mpldap,dc=local
+
+dn: cn=passiv,ou=status,ou=groups,dc=mpldap,dc=local
+objectClass: groupofnames
+cn: passiv
+description: all users who have the status member 
+member: uid=user,ou=people,dc=mpldap,dc=local

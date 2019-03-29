@@ -1,0 +1,27 @@
+dn: ou=status,ou=groups,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: Status
+
+dn: cn=mitglied,ou=status,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: mitglied
+description: all users who have the status member
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=alumi,ou=status,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: alumi
+description: all users who have the status alumi
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=passiv,ou=status,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: passiv
+description: all users who have the status member
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
+
+dn: cn=interessent,ou=status,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: interessent
+description: all users who have the status interessent
+member: cn=base_user,ou=people,dc=cct-ev,dc=de

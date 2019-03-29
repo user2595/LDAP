@@ -1,0 +1,113 @@
+dn: ou=groups,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: Groups
+
+dn: ou=people,dc=cct-ev,dc=de
+objectClass: organizationalUnit
+ou: People
+
+# Alphabetische Reihenfolge
+# 
+# dn: ou=a,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: A
+#
+# dn: ou=b,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: B
+#
+# dn: ou=c,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: C
+#
+# dn: ou=d,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: D
+#
+# dn: ou=e,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: E
+#
+# dn: ou=f,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: F
+#
+# dn: ou=g,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: G
+#
+# dn: ou=h,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: H
+#
+# dn: ou=i,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: I
+#
+# dn: ou=j,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: J
+#
+# dn: ou=k,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: K
+#
+# dn: ou=l,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: L
+#
+# dn: ou=m,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: M
+#
+# dn: ou=n,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: N
+#
+# dn: ou=o,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: O
+#
+# dn: ou=p,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: P
+#
+# dn: ou=q,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: Q
+#
+# dn: ou=r,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: R
+#
+# dn: ou=s,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: S
+#
+# dn: ou=t,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: T
+#
+# dn: ou=u,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: U
+#
+# dn: ou=v,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: V
+#
+# dn: ou=w,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: W
+#
+# dn: ou=x,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: X
+#
+# dn: ou=y,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: Y
+#
+# dn: ou=z,ou=people,dc=cct-ev,dc=de
+# objectClass: organizationalUnit
+# ou: Z

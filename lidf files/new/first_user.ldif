@@ -1,0 +1,8 @@
+dn: cn=Test2 Test,ou=people,dc=mpldap,dc=local
+cn: Test2 Test
+givenName: Test2
+sn: Test
+mail: test2.test@example.com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp

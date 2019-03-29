@@ -1,0 +1,16 @@
+dn: cn=base_user,ou=people,dc=cct-ev,dc=de
+cn: base_user
+givenName: base
+sn: user
+mail: base.user@cct-ev.de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+userPassword: {SSHA}pgs/msXsm0p2+sptZIopwD6eXdMVYmwp
+description: This user needs to exists for memberOf relations
+
+
+dn: cn=users,ou=groups,dc=cct-ev,dc=de
+objectClass: groupofnames
+cn: users
+description: group of all user
+member: cn=base_user,ou=people,dc=cct-ev,dc=de
